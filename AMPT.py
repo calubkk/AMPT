@@ -29,9 +29,9 @@ def main():
     # ======= process arguments ======
     args = init_model()
     print(args)
-    if not args.saveModel:  #是否会在训练后保存模型
+    if not args.saveModel:  
         logger.info("The model will not be saved after training!")
-    # ==== setup logger ====   #确定logging的模式，也就是info或者是debug
+    # ==== setup logger ====   
     if args.loggingLevel == LOGGING_LEVEL_INFO:  
         loggingLevel = logging.INFO
     elif args.loggingLevel == LOGGING_LEVEL_DEBUG:
@@ -45,10 +45,10 @@ def main():
     # tokenizer
     tok = AutoTokenizer.from_pretrained(args.tokenizer)
     # load raw dataset
-    logger.info(f"Loading data from {args.dataDir}") #这个文件夹中会有好多种data
+    logger.info(f"Loading data from {args.dataDir}") 
     dataset = IntentDataset()
     dataset.loadDataset(splitName(args.dataDir))
-    dataset.tokenize(tok) #是在这里去做的分词
+    dataset.tokenize(tok)
     # spit data into training, validation and testing
     logger.info("----- Training Data -----")
     trainData = dataset.splitDomain(splitName(args.sourceDomain)) 
