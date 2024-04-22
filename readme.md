@@ -6,7 +6,6 @@ SIGIR 2023 ([DOI:10.1145/3539618.3591945](https://dl.acm.org/doi/pdf/10.1145/353
 
 </div>
 
-- 
 
 ## 🤝 Dataset
 
