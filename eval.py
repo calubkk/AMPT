@@ -92,7 +92,7 @@ def main():
     # initialize model
     modelConfig = {}
     modelConfig['device'] = torch.device('cuda:0' if not args.disableCuda else 'cpu')
-    modelConfig['clsNumber'] = args.shot #因为在eval的时候这句话已经不是那么重要了，所以可以直接随便乱写就可以
+    modelConfig['clsNumber'] = args.shot 
     modelConfig['LMName'] = args.LMName
     model = IntentBERT(modelConfig)
     logger.info("----- IntentBERT initialized -----")
